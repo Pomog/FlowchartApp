@@ -1,0 +1,15 @@
+{
+  "steps": [
+    {
+      "id": 1,
+      "position": {"x": 300, "y": 100},
+      "stepDescription": "Mixing Chemicals",
+      "equipment": {"name": "Reactor", "code": "R-101", "description": "Stainless Steel Reactor"},
+      "inputMaterials": [{"name": "Acid"}],
+      "outputMaterials": [{"name": "Solution", "linkToNextStep": 2}],
+      "outputWastes": [{"name": "Byproduct"}],
+      "linkToPreviousStep": null,
+      "analysis": [{"name": "pH Check", "result": 1}]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "ProjectName": "Synthesis of API-X",
+  "SynthesisStage": "Purification",
+  "ActivityType": {
+    "Parameters": [
+      {
+        "name": "Temperature",
+        "value": 25,
+        "unit": "C"
+      },
+      {
+        "name": "Stirring Speed",
+        "value": 300,
+        "unit": "rpm"
+      }
+    ]
+  },
+  "StepDescription": "Filtration of the reaction mixture to isolate the product.",
+  "InputMaterial": {
+    "name": "Reaction Mixture",
+    "code": "RM-001",
+    "amountKg": 5.0,
+    "density": 1.2
+  },
+  "OutputMaterials": [
+    {
+      "name": "Purified Product",
+      "code": "PP-001",
+      "amountKg": 4.5,
+      "density": 1.1,
+      "main": "yes",
+      "linkToNextStep": "Crystallization"
+    }
+  ],
+  "OutputWastes": [
+    {
+      "name": "Filtration Residue",
+      "code": "FR-001",
+      "amountKg": 0.5,
+      "density": 1.3
+    }
+  ],
+  "Equipment": {
+    "name": "Buchner Filter",
+    "code": "EQ-101",
+    "description": "Vacuum-assisted filtration system."
+  },
+  "Consumables": [
+    {
+      "name": "Filter Paper",
+      "code": "FP-001",
+      "description": "Size: 110 mm, Pore size: 10 µm"
+    }
+  ],
+  "ExpectedDuration": 60,
+  "LabPersonnelRequired": 1,
+  "StartDay": 3,
+  "StartTime": "09:00",
+  "EndTime": "10:00",
+  "EvaluationOfParameterCriticality": {
+    "CP": "yes",
+    "PC": "no",
+    "CY": "no",
+    "KP": "no",
+    "O": "no",
+    "N": "no"
+  },
+  "Comments": "Ensure vacuum pressure remains constant.",
+  "AnalyzingCorrespondenceToQDQS": {
+    "analysis": {
+      "name": "Purity Check",
+      "failure": {
+        "linkToStep": "Re-filtration"
+      }
+    }
+  },
+  "LinkToPreviousStep": "Reaction",
+  "LinkToNextStep": "Crystallization"
+}
