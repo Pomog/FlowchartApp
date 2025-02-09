@@ -1,8 +1,9 @@
 {
   "ProjectName": "Synthesis of API-X",
   "SynthesisStage": "Purification",
-  "ActivityType": {
-    "Parameters": [
+  "StepDescription": "Filtration of the reaction mixture to isolate the product.",
+  "StepNumber": 1,
+  "Parameters": [
       {
         "name": "Temperature",
         "value": 25,
@@ -13,9 +14,7 @@
         "value": 300,
         "unit": "rpm"
       }
-    ]
-  },
-  "StepDescription": "Filtration of the reaction mixture to isolate the product.",
+    ],
   "InputMaterial": {
     "name": "Reaction Mixture",
     "code": "RM-001",
@@ -29,7 +28,7 @@
       "amountKg": 4.5,
       "density": 1.1,
       "main": "yes",
-      "linkToNextStep": "Crystallization"
+      "linkToNextStepByNumber": 1
     }
   ],
   "OutputWastes": [
@@ -70,10 +69,10 @@
     "analysis": {
       "name": "Purity Check",
       "failure": {
-        "linkToStep": "Re-filtration"
+        "linkToStepByNumber": 3
       }
     }
   },
-  "LinkToPreviousStep": "Reaction",
-  "LinkToNextStep": "Crystallization"
+  "LinkToPreviousStepByNumber": 0,
+  "LinkToNextStepByNumber": 2
 }

@@ -5,6 +5,7 @@ class FlowchartFramework {
     }
 
     render(json) {
+        console.log(json);
         if (!json || typeof json !== "object") throw new Error("Invalid JSON input.");
 
         this.container.innerHTML = ''; // Clear previous drawings
